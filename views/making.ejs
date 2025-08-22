@@ -1,0 +1,42 @@
+<%- include('header.ejs') %>
+
+    <body>
+        <div class="container">
+            <h1>
+                <%= data.strDrink %> cocktail making
+            </h1>
+            <div class="content">
+                <h3>Ingredients</h3>
+                <% for (let i=1; i < 15; i++) { %>
+                    <div>
+                        <% const ingredient=data['strIngredient' + i]; %>
+                            <% if (ingredient) { %>
+                                <%# This check ensures you only print existing ingredients %>
+                                    <li>
+                                        <%= ingredient %>
+                                    </li>
+                                    <% } %>
+                    </div>
+                    <% } %>
+
+                        <h3>Measures</h3>
+                        <% for (let i=1; i < 15; i++) { %>
+                            <div>
+                                <% const ingredient=data['strMeasure' + i]; %>
+                                    <% if (ingredient) { %>
+                                        <%# This check ensures you only print existing ingredients %>
+                                            <li>
+                                                <%= ingredient %>
+                                            </li>
+                                            <% } %>
+                            </div>
+                            <% } %>
+                                <h3>Making</h3>
+                                <p>
+                                    <%= data.strInstructions %>
+                                </p>
+            </div>
+        </div>
+    </body>
+
+    </html>
