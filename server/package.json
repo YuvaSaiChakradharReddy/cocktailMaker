@@ -1,16 +1,18 @@
 {
-  "name": "cocktailmaker",
+  "name": "cocktailmaker-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend API server for Cocktail Maker",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.11.0",
-    "ejs": "^3.1.10",
+    "cors": "^2.8.5",
     "express": "^5.1.0"
   },
   "type": "module"
